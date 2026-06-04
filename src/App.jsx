@@ -1,4 +1,4 @@
-import { ArrowUpRight, Award, BrainCircuit, BriefcaseBusiness, Code2, DatabaseZap, Github, Linkedin, Mail, MapPin, Phone, Rocket, ServerCog, Sparkles } from "lucide-react";
+import { ArrowUpRight, Award, BrainCircuit, BriefcaseBusiness, Code2, DatabaseZap, GitBranch, Link, Mail, MapPin, Phone, Rocket, ServerCog, Sparkles } from "lucide-react";
 import "./App.css";
 
 const skills = [
@@ -208,8 +208,8 @@ function App() {
         </div>
         <div className="contact-actions">
           <a href="mailto:adithyabachha@gmail.com"><Mail size={18} /> Email</a>
-          <a href="#"><Linkedin size={18} /> LinkedIn</a>
-          <a href="#"><Github size={18} /> GitHub</a>
+          <a href="#"><Link size={18} /> LinkedIn</a>
+          <a href="#"><GitBranch size={18} /> GitHub</a>
           <a href="/Adithya_Resume.pdf" target="_blank" rel="noreferrer"><BriefcaseBusiness size={18} /> Resume</a>
         </div>
       </section>
