@@ -208,8 +208,8 @@ function App() {
         </div>
         <div className="contact-actions">
           <a href="mailto:adithyabachha@gmail.com"><Mail size={18} /> Email</a>
-          <a href="#"><Link size={18} /> LinkedIn</a>
-          <a href="#"><GitBranch size={18} /> GitHub</a>
+          <a href="https://www.linkedin.com/in/baacha-adithya-933543204/" target="_blank" rel="noreferrer"><Link size={18} /> LinkedIn</a>
+          <a href="https://github.com/adithyabaacha" target="_blank" rel="noreferrer"><GitBranch size={18} /> GitHub</a>
           <a href="/Adithya_Resume.pdf" target="_blank" rel="noreferrer"><BriefcaseBusiness size={18} /> Resume</a>
         </div>
       </section>
