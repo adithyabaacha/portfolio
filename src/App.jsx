@@ -89,7 +89,7 @@ function App() {
               </div>
               <ul className="profile-meta">
                 <li><span>Hyderabad, India</span></li>
-                <li><span>Oracle | Spring Boot | GenAI</span></li>
+                <li><span>Java | Spring Boot | GenAI | Kubernetes</span></li>
               </ul>
             </div>
           </aside>
