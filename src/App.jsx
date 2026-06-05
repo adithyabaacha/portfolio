@@ -70,7 +70,7 @@ function App() {
             <h1>I'm Adithya</h1>
             <p className="hero-text">Application Solution Developer building enterprise-grade AI, search, and cloud systems with Java, Spring Boot, Elasticsearch, and GenAI.</p>
             <div className="hero-actions">
-              <a className="primary" href="https://github.com/adithyabaacha" target="_blank" rel="noreferrer">View GitHub <ArrowUpRight size={18} /></a>
+              <a className="primary" href="https://www.linkedin.com/in/baacha-adithya-933543204" target="_blank" rel="noreferrer">View LinkedIn <ArrowUpRight size={18} /></a>
               <a className="secondary" href="/Adithya_Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
             </div>
             <div className="hero-tags">
