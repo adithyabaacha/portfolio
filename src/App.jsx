@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ArrowUpRight, Award, BrainCircuit, BriefcaseBusiness, Code2, DatabaseZap, GitBranch, Link, Mail, MapPin, Phone, Rocket, ServerCog, Sparkles } from "lucide-react";
 import "./App.css";
 
@@ -52,12 +51,6 @@ const skills = [
 ];
 
 function App() {
-  const [captionImage, setCaptionImage] = useState(null);
-  const [captionPreview, setCaptionPreview] = useState(null);
-  const [generatedCaption, setGeneratedCaption] = useState("");
-  const [captionLoading, setCaptionLoading] = useState(false);
-  const [captionError, setCaptionError] = useState("");
-
   return (
     <div className="page-shell">
       <header className="topbar">
@@ -158,69 +151,6 @@ function App() {
                 </article>
               );
             })}
-          </div>
-        </section>
-
-        <section className="caption-demo" id="caption-demo">
-          <div className="section-header">
-            <p>Demo</p>
-            <h2>Image captioning interaction</h2>
-          </div>
-          <div className="caption-demo-grid">
-            <div className="caption-demo-card">
-              <div className="caption-preview">
-                {captionPreview ? (
-                  <img src={captionPreview} alt="Uploaded preview" />
-                ) : (
-                  <div className="image-placeholder">Upload an image to generate a caption</div>
-                )}
-              </div>
-              <label className="upload-label">
-                <input type="file" accept="image/*" onChange={(e) => {
-                  const file = e.target.files?.[0];
-                  if (!file) return;
-                  setCaptionError("");
-                  setGeneratedCaption("");
-                  setCaptionImage(file);
-                  setCaptionPreview(URL.createObjectURL(file));
-                }} />
-                Choose image
-              </label>
-              <button className="primary" type="button" disabled={!captionImage || captionLoading} onClick={async () => {
-                if (!captionImage) return;
-                setCaptionLoading(true);
-                setCaptionError("");
-                setGeneratedCaption("");
-                try {
-                  const formData = new FormData();
-                  formData.append("image", captionImage);
-                  const response = await fetch("/api/caption", {
-                    method: "POST",
-                    body: formData,
-                  });
-                  if (!response.ok) throw new Error(`Server error ${response.status}`);
-                  const data = await response.json();
-                  setGeneratedCaption(data.caption || data.result || "No caption returned.");
-                } catch (error) {
-                  setCaptionError("Could not generate caption. Make sure the caption endpoint is configured.");
-                } finally {
-                  setCaptionLoading(false);
-                }
-              }}>
-                {captionLoading ? "Generating..." : "Generate caption"}
-              </button>
-              {captionError && <p className="error-message">{captionError}</p>}
-            </div>
-
-            <div className="caption-result">
-              <p className="eyebrow">Generated caption</p>
-              <div className="caption-output">
-                {generatedCaption || "Upload an image and click generate to preview the caption here."}
-              </div>
-              <div className="caption-help">
-                This demo is designed to connect to a Cloudflare Worker API that sends the image to your model backend and returns the generated caption.
-              </div>
-            </div>
           </div>
         </section>
 
