@@ -108,9 +108,6 @@ function App() {
                 <a className="secondary" href="#projects">See projects</a>
               </div>
             </div>
-            <div className="audio-visual">
-              <div className="audio-art" aria-hidden></div>
-            </div>
           </div>
         </section>
 
