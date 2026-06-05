@@ -29,7 +29,7 @@ const projectCards = [
   {
     title: "Contract Intelligence Platform",
     description: "Search, RAG, and enterprise document workflows for contract teams using Elasticsearch and GenAI.",
-    tags: ["Elasticsearch", "Kafka", "Spring Boot"],
+    tags: ["Elasticsearch", "Kafka", "Spring Boot","SQL"],
     icon: DatabaseZap
   },
   {
