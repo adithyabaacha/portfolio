@@ -21,9 +21,9 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-// Imported via Vite to ensure correct bundling from src/assets/
-import resumePdf from "./assets/Resume_Adithya.pdf";
-import profileImg from "./assets/profile.jpg";
+// Imported via Vite to ensure correct bundling from src/assests/
+import resumePdf from "./assests/Resume_Adithya.pdf";
+import profileImg from "./assests/profile.jpg";
 
 const navItems = ["About", "Experience", "Skills", "Projects", "Contact"];
 
