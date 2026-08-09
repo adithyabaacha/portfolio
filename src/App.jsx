@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 import "./App.css";
 
-// 1. IMPORT YOUR FILES HERE
+// Imported via Vite to ensure correct bundling from src/assets/
 import resumePdf from "./assets/Resume_Adithya.pdf";
 import profileImg from "./assets/profile.jpg";
 
@@ -288,7 +288,6 @@ function App() {
             </p>
 
             <div className="hero-actions">
-              {/* 2. UPDATE YOUR RESUME LINK HERE */}
               <a
                 className="primary"
                 href={resumePdf}
@@ -330,7 +329,6 @@ function App() {
               <div className="orbit-ring ring-two" />
 
               <div className="profile-card">
-                {/* 3. UPDATE YOUR IMAGE SOURCE HERE */}
                 <img src={profileImg} alt="Baacha Adithya" />
               </div>
 
