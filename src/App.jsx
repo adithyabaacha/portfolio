@@ -21,6 +21,10 @@ import {
 } from "lucide-react";
 import "./App.css";
 
+// 1. IMPORT YOUR FILES HERE
+import resumePdf from "./assets/Resume_Adithya.pdf";
+import profileImg from "./assets/profile.jpg";
+
 const navItems = ["About", "Experience", "Skills", "Projects", "Contact"];
 
 const heroSkills = [
@@ -284,9 +288,10 @@ function App() {
             </p>
 
             <div className="hero-actions">
+              {/* 2. UPDATE YOUR RESUME LINK HERE */}
               <a
                 className="primary"
-                href="/Resume_Adithya.pdf"
+                href={resumePdf}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -325,28 +330,29 @@ function App() {
               <div className="orbit-ring ring-two" />
 
               <div className="profile-card">
-                <img src="/profile.jpg" alt="Baacha Adithya" />
+                {/* 3. UPDATE YOUR IMAGE SOURCE HERE */}
+                <img src={profileImg} alt="Baacha Adithya" />
               </div>
 
-<div className="floating-pill pill-one">
-  <ServerCog size={15} /> Java
-</div>
+              <div className="floating-pill pill-one">
+                <ServerCog size={15} /> Java
+              </div>
 
-<div className="floating-pill pill-two">
-  <Zap size={15} /> Spring Boot
-</div>
+              <div className="floating-pill pill-two">
+                <Zap size={15} /> Spring Boot
+              </div>
 
-<div className="floating-pill pill-three">
-  <BrainCircuit size={15} /> GenAI + RAG
-</div>
+              <div className="floating-pill pill-three">
+                <BrainCircuit size={15} /> GenAI + RAG
+              </div>
 
-<div className="floating-pill pill-four">
-  <Code2 size={15} /> Python
-</div>
+              <div className="floating-pill pill-four">
+                <Code2 size={15} /> Python
+              </div>
 
-<div className="floating-pill pill-five">
-  <Code2 size={15} /> JavaScript
-</div>
+              <div className="floating-pill pill-five">
+                <Code2 size={15} /> JavaScript
+              </div>
             </div>
           </div>
         </section>
